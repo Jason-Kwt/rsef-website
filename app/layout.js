@@ -1,5 +1,6 @@
 import './globals.css';
 import Navbar from './Navbar';
+import Footer from './Footer';
 
 export const metadata = {
   title: 'RSEF',
@@ -13,6 +14,7 @@ export default function RootLayout({ children }) {
         <Navbar />
 
         {children}
+        <Footer />
       </body>
     </html>
   );

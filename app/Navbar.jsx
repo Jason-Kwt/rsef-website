@@ -17,19 +17,26 @@ function Navbar() {
 
   return (
     <>
-      <div className="w-full top-0 bg-gray-50 ">
-        <div className="container mx-auto border-2 ">
+      <nav className="w-full bg-gray-50 z-[1000] fixed pt-6">
+        <div className="container mx-auto ">
           {/* nav item */}
-          <div className="flex flex-row justify-between items-center">
+          <div className="flex justify-between items-center">
             <Link href="/">
-              <h1>Logo</h1>
+              <Image width={240} height={120} src={'/logo.svg'} />
             </Link>
-            <div className="flex flex-col border-2 gap-4 items-end justify-center">
-              <div className="flex flex-row">
-                <p>友好機構: </p>
-                <Link href="/">RSEFHK MARIA COLLEGE</Link>
+            <div className="flex flex-col gap-4 items-end justify-center">
+              {/* Top Menu */}
+              <div className="flex flex-row text-sm gap-6 text-teal-700">
+                <div className="flex">
+                  <p>友好機構:</p>
+                  <Link href="/">RSEFHK MARIA COLLEGE</Link>
+                </div>
+                <div className="flex">
+                  <Link href="/">其他連結</Link>
+                </div>
               </div>
-              <div className="border-2 flex font-bold items-center justify-center text-teal-900  text-lg">
+              {/*  Main Menu */}
+              <div className=" flex font-bold items-center justify-center text-teal-900  text-lg gap-6">
                 <div className="px-6 py-6 transition navItemHover hover:scale-110 duration-300">
                   <Link href="/">主頁</Link>
                 </div>
@@ -40,7 +47,7 @@ function Navbar() {
                 <div className="group ">
                   <div
                     className="px-4 py-6 transition group-hover:bg-white group-hover:text-teal-700 
-                     hover:drop-shadow-sm border-2 hover:scale-110"
+                     group-hover:drop-shadow-lg  group-hover:scale-110"
                   >
                     <Link href="/about-us">關於我們</Link>
                   </div>
@@ -115,7 +122,7 @@ function Navbar() {
           {/* navbar  */}
         </div>
         {/* end container */}
-      </div>
+      </nav>
     </>
   );
 }
