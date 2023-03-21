@@ -27,8 +27,11 @@ export default function Home() {
             </div>
             {/* Card */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-between items-center gap-16">
-              {dataNews.map((newPost) => (
-                <div className="bg-white h-[390px] drop-shadow-lg overflow-hidden">
+              {dataNews.map((newPost, index) => (
+                <div
+                  key={index}
+                  className="bg-white h-[390px] drop-shadow-lg overflow-hidden"
+                >
                   <Image
                     src={newPost.imgUrl}
                     alt={newPost.title}

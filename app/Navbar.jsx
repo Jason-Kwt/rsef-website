@@ -22,7 +22,7 @@ function Navbar() {
           {/* nav item */}
           <div className="flex justify-between items-center">
             <Link href="/">
-              <Image width={240} height={120} src={'/logo.svg'} />
+              <Image width={240} height={120} src={'/logo.svg'} alt="" />
             </Link>
             <div className="flex flex-col gap-4 items-end justify-center">
               {/* Top Menu */}

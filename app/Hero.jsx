@@ -36,6 +36,7 @@ function Hero() {
               height={1080}
               className="w-screen h-[60vh] lg:h-[70vh] object-cover object-center overflow-hidden"
               src={item.url}
+              alt=""
             />
           </div>
         ))}
