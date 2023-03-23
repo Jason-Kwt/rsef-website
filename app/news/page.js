@@ -1,10 +1,33 @@
 import React from 'react';
-import Hero from '../Hero';
+import SecondBanner from '@/components/SecondBanner';
+import Breadcrumbs from '@/components/Breadcrumbs';
 
 export default function news() {
   return (
     <main>
-      <Hero />
+      <SecondBanner title={'最新消息'} imgUrl={'/hero_01.jpg'} />
+
+      <Breadcrumbs
+        items={[
+          {
+            label: 'Home',
+            path: '/',
+          },
+          {
+            label: 'Development',
+            path: '/courses/development',
+          },
+          {
+            label: 'Programming Languages',
+            path: '/courses/development/programming-languages',
+          },
+          {
+            label: 'Python',
+            path: '/topic/python',
+          },
+        ]}
+      />
+
       <section id="news-page" className="w-full">
         <div className="container mx-auto my-16 border-2">
           <div className="flex flex-col">
